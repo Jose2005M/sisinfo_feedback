@@ -1,0 +1,303 @@
+:root {
+  --azul-unipaz: #1C3E77;
+  --verde-unipaz: #1E9C4A;
+  --gris-claro: #f5f7fb;
+  --texto: #333;
+  --blanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fb 0%, #e8ecf4 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Encabezado mejorado */
+header {
+  background: linear-gradient(135deg, var(--azul-unipaz) 0%, #2a5298 50%, var(--verde-unipaz) 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 10px 40px rgba(28, 62, 119, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 200px;
+  height: 200px;
+  background: rgba(30, 156, 74, 0.2);
+  border-radius: 50%;
+}
+
+header img {
+  width: 100px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 1.9em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-bottom: 15px;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+header p {
+  font-size: 1em;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+/* Formulario mejorado */
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--azul-unipaz);
+  font-size: 0.95em;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--verde-unipaz);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 156, 74, 0.1);
+  transform: translateY(-2px);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Sistema de calificación mejorado */
+.rating-container {
+  margin-top: 10px;
+}
+
+select#calificacion-lista {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+select#calificacion-lista option {
+  padding: 10px;
+}
+
+/* Botón mejorado */
+button {
+  background: linear-gradient(135deg, var(--verde-unipaz) 0%, #25b558 100%);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  margin-top: 30px;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 156, 74, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(30, 156, 74, 0.4);
+  background: linear-gradient(135deg, #25b558 0%, var(--verde-unipaz) 100%);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer mejorado */
+footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Indicador visual de campos requeridos */
+label::after {
+  content: ' *';
+  color: var(--verde-unipaz);
+  font-weight: bold;
+}
+
+/* Animación de carga */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* 📱 Diseño Responsivo - TABLETS */
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  header {
+    padding: 30px 20px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  form {
+    padding: 30px 20px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 14px;
+  }
+}
+
+/* 📱 Diseño Responsivo - MÓVILES */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    padding: 25px 15px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  header img {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 0.9em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+
+  form {
+    padding: 25px 15px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 12px 14px;
+    font-size: 0.95em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 0.85em;
+    padding: 15px;
+  }
+}

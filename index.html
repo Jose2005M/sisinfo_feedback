@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Rueda de Proyectos SISINFO 2025B</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="/img/SISINFO3.png" alt="Logo SISINFO">
+      <h1>IX Rueda de Proyecto - Programa de Ingeniería Informática</h1>
+      <h3>Código con Conciencia: Ingeniería Informática al Servicio de la Humanidad</h3>
+      <p>Feedback de los Asistentes</p>
+    </header>
+
+    <form id="form-opinion">
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez García" required>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo institucional</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@unipaz.edu.co"
+               required pattern="^[a-zA-Z0-9._%+-]+@unipaz\.edu\.co$">
+      </div>
+
+      <div class="form-group">
+        <label for="programa">Programa académico</label>
+        <select id="programa" name="programa" required>
+          <option value="">-- Selecciona tu programa --</option>
+          <option value="Administración de Negocios Internacionales">Administración de Negocios Internacionales</option>
+          <option value="Ingeniería Informática">Ingeniería Informática</option>
+          <option value="Licenciatura en Artes">Licenciatura en Artes</option>
+          <option value="Química">Química</option>
+          <option value="Comunicación Social">Comunicación Social</option>
+          <option value="Trabajo Social">Trabajo Social</option>
+          <option value="Derecho">Derecho</option>
+          <option value="Técnico en Extracción de Biomasa Energética">Técnico en Extracción de Biomasa Energética</option>
+          <option value="Tecnología en Procesamiento de Alimentos">Tecnología en Procesamiento de Alimentos</option>
+          <option value="Ingeniería Agroindustrial">Ingeniería Agroindustrial</option>
+          <option value="Profesional en Turismo">Profesional en Turismo</option>
+          <option value="Tecnología en Obras Civiles">Tecnología en Obras Civiles</option>
+          <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+          <option value="Tecnología en Operación de Sistemas Electromecánicos">Tecnología en Operación de Sistemas Electromecánicos</option>
+          <option value="Tecnología en Seguridad y Salud en el Trabajo">Tecnología en Seguridad y Salud en el Trabajo</option>
+          <option value="Ingeniería en Producción">Ingeniería en Producción</option>
+          <option value="Ingeniería en Seguridad y Salud en el Trabajo">Ingeniería en Seguridad y Salud en el Trabajo</option>
+          <option value="Medicina Veterinaria y Zootecnia">Medicina Veterinaria y Zootecnia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="proyecto">Nombre del proyecto</label>
+        <input type="text" id="proyecto" name="proyecto"
+               placeholder="Ej: Plataforma de innovación educativa" required>
+      </div>
+
+      <div class="form-group">
+        <label for="calificacion-lista">Calificación del proyecto</label>
+        <div class="rating-container">
+          <select id="calificacion-lista" name="calificacion-lista" required>
+            <option value="">-- Selecciona una calificación --</option>
+            <option value="5">⭐⭐⭐⭐⭐ 5 estrellas (Excelente)</option>
+            <option value="4">⭐⭐⭐⭐ 4 estrellas (Muy bueno)</option>
+            <option value="3">⭐⭐⭐ 3 estrellas (Bueno)</option>
+            <option value="2">⭐⭐ 2 estrellas (Regular)</option>
+            <option value="1">⭐ 1 estrella (Deficiente)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comentario">Tu opinión sobre el proyecto</label>
+        <textarea id="comentario" name="comentario" rows="4"
+                  placeholder="Escribe aquí tus observaciones, sugerencias o comentarios..." required></textarea>
+      </div>
+
+      <button type="submit">Enviar Opinión</button>
+    </form>
+
+    <footer>
+      © 2025 Semillero SISINFO - Institución Universitaria De La Paz - UNIPAZ
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
